@@ -3,274 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WEILERS CLEANING SERVICE CORP — Formule 3 (Commercial Only)</title>
-  <meta name="description" content="Commercial & office cleaning in Orlando, FL. Grey & Blue classy aesthetic with smooth micro‑interactions." />
+  <title>WEILERS CLEANING SERVICE CORP — Commercial Cleaning</title>
+  <meta name="description" content="Commercial & office cleaning in Orlando, FL. Grey & Blue classy aesthetic." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#F4F7FB;
-      --surface:#FFFFFF;
-      --ink:#0D1B2A;      /* deep grey */
-      --muted:#58677C;    /* slate */
-      --blue:#1F6FEB;     /* primary blue */
-      --blue-ink:#0F3A8E; /* dark blue */
-      --line:#E6ECF5;     /* separators */
-      --radius:18px;
-      --shadow:0 12px 30px rgba(15,38,85,.08);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; background:var(--bg); color:var(--ink);}
-    a{color:inherit; text-decoration:none}
-    img{max-width:100%; display:block}
-    .container{width:min(1150px,92%); margin-inline:auto}
-
-    /* Topbar */
-    header{position:sticky; top:0; z-index:40; background:rgba(255,255,255,.75); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
-    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-    .brand{display:flex; align-items:center; gap:12px}
-    .logo{width:44px; height:44px; border-radius:14px; background:conic-gradient(from 120deg, #DDE6F8, #BFD4FF, #DDE6F8); border:1px solid var(--line); box-shadow:var(--shadow)}
-    .brand b{letter-spacing:.2px}
-    .nav a{padding:10px 14px; border-radius:12px}
-    .nav a:hover{background:#EEF3FB}
-    .cta{display:inline-flex; align-items:center; gap:10px; background:var(--ink); color:#fff; padding:10px 14px; border-radius:12px}
-
-    /* Hero */
-    .hero{position:relative; overflow:hidden}
-    .hero-inner{display:grid; grid-template-columns:1.1fr .9fr; gap:36px; padding:80px 0}
-    .eyebrow{color:var(--blue-ink); text-transform:uppercase; letter-spacing:.18em; font-weight:700; font-size:.78rem}
-    h1{font-size:clamp(2.1rem, 3.6vw + .6rem, 3.8rem); line-height:1.06; margin:10px 0 12px}
-    .lead{color:var(--muted); font-size:1.06rem; line-height:1.7; max-width:62ch}
-
-    /* Accent underline that animates */
-    .underline{position:relative; display:inline-block}
-    .underline::after{content:""; position:absolute; left:0; right:0; bottom:-6px; height:10px; background:linear-gradient(90deg,#9EC5FF, #1F6FEB, #9EC5FF); border-radius:999px; filter:blur(6px); opacity:.55; animation:shimmer 4.5s ease-in-out infinite}
-    @keyframes shimmer{0%,100%{transform:translateX(-6%)}50%{transform:translateX(6%)}}
-
-    /* Media stack with subtle float */
-    .stack{display:grid; gap:14px}
-    .photo{border-radius:16px; overflow:hidden; background:#EEF3FB; border:1px solid var(--line); box-shadow:var(--shadow); transform:translateY(0); transition:transform .35s ease}
-    .photo:hover{transform:translateY(-6px)}
-    .photo img{aspect-ratio:4/3; object-fit:cover}
-
-    /* Section shells */
-    section{padding:84px 0; position:relative}
-    .card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow)}
-    .section-head{display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:20px}
-    .section-title{font-size:clamp(1.5rem, 1.4vw + .7rem, 2.2rem); margin:0}
-    .section-lead{color:var(--muted); max-width:70ch}
-
-    /* About */
-    .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px}
-    .bullet{display:flex; gap:12px; padding:12px; border-radius:12px; background:#F7FAFF; border:1px dashed #CFE0FF}
-
-    /* Services — tiles */
-    .tiles{display:grid; grid-template-columns:repeat(12,1fr); gap:16px}
-    .tile{grid-column:span 4; padding:18px; display:flex; flex-direction:column; gap:10px}
-    .tile h3{margin:2px 0 0}
-    .tile p{color:var(--muted); margin:0}
-    .tile .tag{display:inline-block; font-size:.75rem; padding:6px 10px; border-radius:999px; background:#E8F1FF; color:#17488F; border:1px solid #CDE0FF}
-
-    /* Gallery — masonry look */
-    .masonry{columns:4 220px; column-gap:14px}
-    .masonry a{display:block; break-inside:avoid; margin:0 0 14px}
-    .masonry img{width:100%; border-radius:14px; border:1px solid var(--line); box-shadow:var(--shadow)}
-
-    /* Contact */
-    .contact-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:20px}
-    .input{width:100%; padding:14px 16px; border-radius:12px; border:1px solid var(--line); background:#FAFCFF}
-    .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 16px; border-radius:12px; background:var(--blue); color:#fff; border:0}
-    .list{display:grid; gap:10px}
-    .list .row{display:flex; gap:12px; align-items:flex-start; padding:12px; border-radius:12px; background:#F7FAFF; border:1px dashed #CFE0FF}
-
-    /* Diagonal separators */
-    .slice{position:absolute; left:0; right:0; height:84px; background:linear-gradient(180deg, rgba(159,196,255,.12), rgba(159,196,255,0));}
-    .slice.top{top:-84px; clip-path:polygon(0 100%,100% 0,100% 100%,0 100%)}
-    .slice.bot{bottom:-84px; clip-path:polygon(0 0,100% 0,100% 0,0 100%)}
-
-    /* Reveal */
-    .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease}
-    .reveal.in{opacity:1; transform:translateY(0)}
-
-    footer{padding:26px 0 40px; border-top:1px solid var(--line); color:var(--muted)}
-
-    @media (max-width: 920px){
-      .hero-inner, .about-grid, .contact-grid{grid-template-columns:1fr}
-    }
+    body{margin:0;font-family:Inter, sans-serif;background:#F4F7FB;color:#0D1B2A}
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #E6ECF5;padding:12px 0}
+    .container{width:min(1150px,92%);margin:auto}
+    nav{display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .hero{padding:80px 0;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+    .hero h1{font-size:2.5rem;margin:0 0 12px;color:#0F3A8E}
+    .hero p{color:#58677C;font-size:1.1rem;line-height:1.6}
+    .stack{display:grid;gap:12px}
+    .stack img{width:100%;border-radius:12px;object-fit:cover;border:1px solid #E6ECF5}
+    section{padding:70px 0}
+    .section-title{font-size:1.8rem;margin-bottom:10px}
+    .section-lead{color:#58677C;max-width:70ch}
+    .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:20px}
+    .tile{background:#fff;border:1px solid #E6ECF5;border-radius:12px;padding:18px}
+    .tile h3{margin:6px 0}
+    .gallery{columns:3 200px;column-gap:14px}
+    .gallery img{width:100%;margin:0 0 14px;border-radius:12px;border:1px solid #E6ECF5}
+    footer{padding:20px 0;border-top:1px solid #E6ECF5;color:#58677C;text-align:center}
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <a class="brand" href="#home">
-        <div class="logo" aria-hidden="true"></div>
+      <nav>
         <b>WEILERS CLEANING SERVICE CORP</b>
-      </a>
-      <nav style="display:flex; gap:8px; align-items:center">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-        <a class="cta" href="tel:+19713337535">Call +1 971 333 7535</a>
+        <div>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="container hero-inner">
-        <div>
-          <div class="eyebrow">Grey & Blue — Classy</div>
-          <h1>Spotless Offices. <span class="underline">Professional Care</span>.</h1>
-          <p class="lead">Strictly <strong>commercial & office cleaning</strong> across Orlando, FL — windows for towers, floor care for lobbies, and nightly janitorial for workspaces.</p>
-          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:18px">
-            <a class="btn" href="#contact">Get a Free Quote</a>
-            <a class="btn" style="background:#0D1B2A" href="mailto:contact@wcscecorp.shop">contact@wcscecorp.shop</a>
-          </div>
-        </div>
-        <div class="stack">
-          <!-- COMMERCIAL‑ONLY IMAGES -->
-          <div class="photo"><img alt="Commercial window cleaning on high‑rise" src="https://cmmonline.com/wp-content/uploads/03-2016-window-washing-detail-1200x627.jpg"/></div>
-          <div class="photo"><img alt="Janitorial floor machine in office lobby" src="https://greatfacility.com/images/022947124_prevstill.jpeg"/></div>
-          <div class="photo"><img alt="Office glass facade service" src="https://cmmonline.com/wp-content/uploads/03-2016-window-washing-detail-1200x627.jpg"/></div>
-        </div>
+    <section class="hero">
+      <div>
+        <h1>Commercial Cleaning Experts</h1>
+        <p>We focus exclusively on <strong>corporate & office cleaning</strong>: high‑rise windows, floor care for lobbies, and janitorial services. Professional teams trained for business environments.</p>
       </div>
-      <div class="slice bot"></div>
+      <div class="stack">
+        <img src="https://cmmonline.com/wp-content/uploads/03-2016-window-washing-detail-1200x627.jpg" alt="Window washing">
+        <img src="https://i7.photo.2gis.com/images/branch/43/6051712021376094_8d2e.jpg" alt="Office building">
+      </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about">
       <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">About Us</h2>
-          <p class="section-lead">Our focus is <strong>companies only</strong>: offices, towers, retail, and corporate facilities. No residential jobs — we’re built for business environments.</p>
-        </div>
-        <div class="about-grid">
-          <div class="card" style="padding:18px">
-            <div class="bullet"><strong>Trained & Insured</strong> <span style="color:var(--muted)">Background‑checked pros for corporate sites.</span></div>
-            <div class="bullet"><strong>Quality Checked</strong> <span style="color:var(--muted)">Supervisor sign‑off & KPIs for SLAs.</span></div>
-            <div class="bullet"><strong>Flexible Hours</strong> <span style="color:var(--muted)">Nightly, weekends, & after‑hours.</span></div>
-          </div>
-          <div class="card" style="padding:0; overflow:hidden">
-            <img src="https://greatfacility.com/images/022947124_prevstill.jpeg" alt="Corporate lobby floor care"/>
-          </div>
+        <h2 class="section-title">About Us</h2>
+        <p class="section-lead">Our domain is <strong>cleaning for companies only</strong>: offices, towers, retail, and corporate facilities. No residential jobs — we’re built for business.</p>
+        <div class="stack" style="margin-top:20px">
+          <img src="https://greatfacility.com/images/022947124_prevstill.jpeg" alt="Floor cleaning in lobby">
         </div>
       </div>
-      <div class="slice bot"></div>
     </section>
 
-    <!-- SERVICES -->
     <section id="services">
       <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">Commercial Services</h2>
-          <p class="section-lead">Detail‑oriented cleaning for offices, lobbies, and corporate facilities.</p>
-        </div>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-lead">Specialized cleaning tailored for companies.</p>
         <div class="tiles">
-          <article class="card tile reveal">
-            <span class="tag">Windows</span>
+          <div class="tile">
             <h3>High‑Rise Windows</h3>
-            <p>Pure‑water poles, lifts, and safe facade access.</p>
-          </article>
-          <article class="card tile reveal">
-            <span class="tag">Janitorial</span>
-            <h3>Nightly Office Cleaning</h3>
-            <p>Desks, restrooms, meeting rooms, kitchens.</p>
-          </article>
-          <article class="card tile reveal">
-            <span class="tag">Floors</span>
-            <h3>Machine Floor Care</h3>
-            <p>Scrubbers, polishers, and scheduled maintenance.</p>
-          </article>
-          <article class="card tile reveal">
-            <span class="tag">Disinfection</span>
-            <h3>High‑Touch Protocols</h3>
-            <p>EPA‑grade products and checklists.</p>
-          </article>
-          <article class="card tile reveal">
-            <span class="tag">Common Areas</span>
-            <h3>Lobbies & Elevators</h3>
-            <p>Daily shine for high‑traffic zones.</p>
-          </article>
-          <article class="card tile reveal">
-            <span class="tag">Specialty</span>
-            <h3>Glass & Facades</h3>
-            <p>Signage, atriums, and exterior glass.</p>
-          </article>
-        </div>
-      </div>
-      <div class="slice bot"></div>
-    </section>
-
-    <!-- GALLERY (COMMERCIAL ONLY) -->
-    <section id="gallery">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">Recent Commercial Work</h2>
-          <p class="section-lead">Snapshots from high‑rise windows and corporate floor care.</p>
-        </div>
-        <div class="masonry">
-          <a href="#"><img alt="High‑rise window cleaning" src="https://cmmonline.com/wp-content/uploads/03-2016-window-washing-detail-1200x627.jpg"/></a>
-          <a href="#"><img alt="Office lobby floor machine" src="https://greatfacility.com/images/022947124_prevstill.jpeg"/></a>
-          <a href="#"><img alt="Facade service" src="https://cmmonline.com/wp-content/uploads/03-2016-window-washing-detail-1200x627.jpg"/></a>
-          <a href="#"><img alt="Janitorial team in lobby" src="https://greatfacility.com/images/022947124_prevstill.jpeg"/></a>
-        </div>
-      </div>
-      <div class="slice bot"></div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">Contact</h2>
-          <p class="section-lead">Tell us about your facility — we’ll tailor a plan and quote.</p>
-        </div>
-        <div class="contact-grid">
-          <form class="card" style="padding:18px" onsubmit="event.preventDefault(); alert('Thanks! We\'ll get back to you shortly.');">
-            <input class="input" placeholder="Full name" required>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:10px 0">
-              <input class="input" type="email" placeholder="Email" required>
-              <input class="input" type="tel" placeholder="Phone" required>
-            </div>
-            <textarea class="input" rows="4" placeholder="What do you need cleaned?"></textarea>
-            <button class="btn" type="submit">Send Request</button>
-          </form>
-          <div class="card" style="padding:18px">
-            <div class="list">
-              <div class="row"><strong>Address</strong><div>PARK CENTRAL DR, APT1718, ORLANDO, FL, 32839</div></div>
-              <div class="row"><strong>Phone</strong><a href="tel:+19713337535">+1 971 333 7535</a></div>
-              <div class="row"><strong>Email</strong><a href="mailto:contact@wcscecorp.shop">contact@wcscecorp.shop</a></div>
-              <div class="row"><strong>Hours</strong><div>Mon–Sun • 8:00 – 20:00</div></div>
-            </div>
+            <p>Safe exterior cleaning for towers & facades.</p>
+          </div>
+          <div class="tile">
+            <h3>Office Janitorial</h3>
+            <p>Nightly cleaning for desks, restrooms, and kitchens.</p>
+          </div>
+          <div class="tile">
+            <h3>Floor Care</h3>
+            <p>Machine scrubbers and polishers for lobbies.</p>
+          </div>
+          <div class="tile">
+            <h3>Disinfection</h3>
+            <p>High‑touch sanitation with EPA‑grade products.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery">
+          <img src="https://cmmonline.com/wp-content/uploads/03-2016-window-washing-detail-1200x627.jpg" alt="Window cleaning">
+          <img src="https://greatfacility.com/images/022947124_prevstill.jpeg" alt="Lobby floor machine">
+          <img src="https://i7.photo.2gis.com/images/branch/43/6051712021376094_8d2e.jpg" alt="Office tower">
+          <img src="https://avatars.mds.yandex.net/i?id=e9dd6ca6310df000b1db8a410e1f3b30_l-5151239-images-thumbs&ref=rim&n=13&w=600&h=426" alt="Team cleaning commercial space">
+          <img src="https://avatars.mds.yandex.net/get-ydo/3904573/2a00000181b9007fcd00158c2b42434bb8b3/diploma" alt="Certification">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <p>Email: <a href="mailto:contact@wcscecorp.shop">contact@wcscecorp.shop</a><br>
+           Phone: <a href="tel:+19713337535">+1 971 333 7535</a><br>
+           Address: PARK CENTRAL DR, APT1718, ORLANDO, FL, 32839</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap">
-      <div style="display:flex; align-items:center; gap:10px">
-        <div class="logo" style="width:32px; height:32px"></div>
-        <span>© <span id="year"></span> WEILERS CLEANING SERVICE CORP</span>
-      </div>
-      <div style="display:flex; gap:10px">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </div>
-    </div>
+    <div class="container">© <span id="year"></span> WEILERS CLEANING SERVICE CORP</div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Reveal on scroll
-    const io = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target)}}),{threshold:.15});
-    document.querySelectorAll('.reveal, .tile').forEach(el=>io.observe(el));
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
