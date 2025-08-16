@@ -3,377 +3,250 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WEILERS CLEANING SERVICE CORP</title>
-  <meta name="description" content="WEILERS CLEANING SERVICE CORP — Professional cleaning services in Orlando, FL. Windows, offices, residential & more. Call +1 971 333 7535." />
-  <meta property="og:title" content="WEILERS CLEANING SERVICE CORP" />
-  <meta property="og:description" content="Professional & classy cleaning services with animated, modern website experience." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://cmmonline.com/wp-content/uploads/03-2016-window-washing-detail-1200x627.jpg" />
+  <title>WEILERS CLEANING SERVICE CORP — Formule 3 (Alt)</title>
+  <meta name="description" content="Premium residential & commercial cleaning in Orlando, FL. Grey & Blue classy aesthetic with smooth micro‑interactions." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <style>
     :root{
-      --blue-900:#0B1F44; /* deep navy */
-      --blue-700:#1E3A8A; /* accent */
-      --blue-500:#2563EB; /* primary */
-      --blue-300:#60A5FA; /* light accent */
-      --gray-900:#0F172A; /* slate-900 */
-      --gray-800:#111827;
-      --gray-700:#1F2937;
-      --gray-600:#374151;
-      --gray-500:#6B7280;
-      --gray-300:#D1D5DB;
-      --gray-200:#E5E7EB;
-      --gray-100:#F3F4F6;
-      --white:#ffffff;
+      --bg:#F4F7FB;
+      --surface:#FFFFFF;
+      --ink:#0D1B2A;      /* deep grey */
+      --muted:#58677C;    /* slate */
+      --blue:#1F6FEB;     /* primary blue */
+      --blue-ink:#0F3A8E; /* dark blue */
+      --line:#E6ECF5;     /* separators */
       --radius:18px;
-      --shadow-lg:0 20px 35px rgba(0,0,0,.15);
-      --shadow-md:0 10px 20px rgba(0,0,0,.12);
-      --shadow-sm:0 6px 12px rgba(0,0,0,.08);
+      --shadow:0 12px 30px rgba(15,38,85,.08);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{
-      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-      color:var(--gray-100); background:linear-gradient(160deg,#0D1422,#0E1324 30%,#0B1228 60%,#0A122B);
-      overflow-x:hidden;
-    }
+    body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; background:var(--bg); color:var(--ink);}
     a{color:inherit; text-decoration:none}
     img{max-width:100%; display:block}
-    .container{width:min(1200px,92%); margin-inline:auto}
+    .container{width:min(1150px,92%); margin-inline:auto}
 
-    /* ================== HEADER ================== */
-    header{
-      position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(10px);
-      background:rgba(8,12,24,.55); border-bottom:1px solid rgba(255,255,255,.06);
-      box-shadow:0 6px 24px rgba(0,0,0,.18);
-    }
+    /* Topbar */
+    header{position:sticky; top:0; z-index:40; background:rgba(255,255,255,.75); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
     .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.3px}
-    .logo{
-      width:42px; height:42px; border-radius:12px; overflow:hidden; position:relative;
-      box-shadow:var(--shadow-sm);
-      background: radial-gradient(120% 120% at 0% 0%, #1E3A8A 0%, #0B1F44 48%, #0B1F44 100%);
-    }
-    .logo::after{content:""; position:absolute; inset:-20%; background:conic-gradient(from 180deg, rgba(96,165,250,.35), transparent 50%, rgba(37,99,235,.25)); filter:blur(10px); animation:spin 12s linear infinite}
-    @keyframes spin{to{transform:rotate(360deg)}}
-    .brand span{font-size:1.05rem; color:#E6EEFF}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:44px; height:44px; border-radius:14px; background:conic-gradient(from 120deg, #DDE6F8, #BFD4FF, #DDE6F8); border:1px solid var(--line); box-shadow:var(--shadow)}
+    .brand b{letter-spacing:.2px}
+    .nav a{padding:10px 14px; border-radius:12px}
+    .nav a:hover{background:#EEF3FB}
+    .cta{display:inline-flex; align-items:center; gap:10px; background:var(--ink); color:#fff; padding:10px 14px; border-radius:12px}
 
-    .nav-links{display:flex; gap:22px; align-items:center}
-    .nav-links a{padding:10px 14px; border-radius:14px; color:#DCE7FF; font-weight:500; opacity:.9}
-    .nav-links a:hover{background:rgba(255,255,255,.06)}
+    /* Hero */
+    .hero{position:relative; overflow:hidden}
+    .hero-inner{display:grid; grid-template-columns:1.1fr .9fr; gap:36px; padding:80px 0}
+    .eyebrow{color:var(--blue-ink); text-transform:uppercase; letter-spacing:.18em; font-weight:700; font-size:.78rem}
+    h1{font-size:clamp(2.1rem, 3.6vw + .6rem, 3.8rem); line-height:1.06; margin:10px 0 12px}
+    .lead{color:var(--muted); font-size:1.06rem; line-height:1.7; max-width:62ch}
 
-    .cta-phone{display:none}
+    /* Accent underline that animates */
+    .underline{position:relative; display:inline-block}
+    .underline::after{content:""; position:absolute; left:0; right:0; bottom:-6px; height:10px; background:linear-gradient(90deg,#9EC5FF, #1F6FEB, #9EC5FF); border-radius:999px; filter:blur(6px); opacity:.55; animation:shimmer 4.5s ease-in-out infinite}
+    @keyframes shimmer{0%,100%{transform:translateX(-6%)}50%{transform:translateX(6%)}}
 
-    .hamburger{display:none; width:42px; height:42px; border-radius:12px; align-items:center; justify-content:center; border:1px solid rgba(255,255,255,.08)}
+    /* Media stack with subtle float */
+    .stack{display:grid; gap:14px}
+    .photo{border-radius:16px; overflow:hidden; background:#EEF3FB; border:1px solid var(--line); box-shadow:var(--shadow); transform:translateY(0); transition:transform .35s ease}
+    .photo:hover{transform:translateY(-6px)}
+    .photo img{aspect-ratio:4/3; object-fit:cover}
 
-    /* ================== HERO ================== */
-    .hero{position:relative; padding:80px 0 110px; overflow:hidden}
-    .grid-hero{display:grid; grid-template-columns:1.15fr .85fr; gap:40px; align-items:center}
-    .kicker{color:#A7B7D9; font-weight:600; letter-spacing:.25em; text-transform:uppercase; font-size:.78rem}
-    .h1{font-size:clamp(2.2rem, 4vw + .5rem, 3.8rem); line-height:1.08; font-weight:900; margin:10px 0; color:#F4F8FF}
-    .lead{color:#C9D6EF; font-size:1.08rem; line-height:1.65; max-width:60ch}
-
-    .actions{display:flex; gap:14px; margin-top:26px; flex-wrap:wrap}
-    .btn{position:relative; display:inline-flex; align-items:center; gap:10px; padding:14px 18px; border-radius:16px; font-weight:700; letter-spacing:.2px; transition:.25s transform, .25s box-shadow, .25s background}
-    .btn-primary{background:linear-gradient(180deg, var(--blue-500), var(--blue-700)); box-shadow:0 10px 24px rgba(37,99,235,.35)}
-    .btn-primary:hover{transform:translateY(-2px); box-shadow:0 16px 40px rgba(37,99,235,.45)}
-    .btn-ghost{border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.03)}
-    .btn-ghost:hover{background:rgba(255,255,255,.06)}
-
-    .hero-media{position:relative}
-    .media-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; transform:perspective(900px) rotateY(-8deg) rotateX(2deg); transform-origin:left center}
-    .card-img{border-radius:16px; overflow:hidden; background:#0E1528; border:1px solid rgba(255,255,255,.08); box-shadow:var(--shadow-md); position:relative}
-    .card-img img{aspect-ratio:4/3; object-fit:cover; opacity:.98; filter:saturate(1.05) contrast(1.02)}
-    .card-img:hover{transform:translateY(-6px) scale(1.02)}
-    .tilt{transition:.35s transform}
-
-    /* floating blobs */
-    .blob{position:absolute; filter:blur(40px); opacity:.35; mix-blend:screen}
-    .blob.b1{width:380px; height:380px; top:-80px; left:-120px; background:radial-gradient(circle at 30% 30%, #60A5FA, transparent 60%); animation:float 8s ease-in-out infinite}
-    .blob.b2{width:320px; height:320px; bottom:-80px; right:-60px; background:radial-gradient(circle at 70% 70%, #1E3A8A, transparent 55%); animation:float 9.5s ease-in-out infinite reverse}
-    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
-
-    /* ================== SECTIONS ================== */
-    section{padding:90px 0; position:relative}
-    .section-title{font-size:clamp(1.6rem, 1.6vw + .8rem, 2.2rem); font-weight:900; margin:0 0 14px}
-    .section-lead{color:#C9D6EF; max-width:65ch; line-height:1.7}
+    /* Section shells */
+    section{padding:84px 0; position:relative}
+    .card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow)}
+    .section-head{display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:20px}
+    .section-title{font-size:clamp(1.5rem, 1.4vw + .7rem, 2.2rem); margin:0}
+    .section-lead{color:var(--muted); max-width:70ch}
 
     /* About */
-    .about{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); border-top:1px solid rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.06)}
-    .about-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:34px; align-items:center}
-    .about-card{border:1px solid rgba(255,255,255,.08); background:rgba(17,24,39,.55); border-radius:var(--radius); padding:24px; box-shadow:var(--shadow-sm)}
-    .stat{display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:center; padding:14px 16px; border-radius:14px; background:rgba(255,255,255,.04); margin-top:12px}
+    .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+    .bullet{display:flex; gap:12px; padding:12px; border-radius:12px; background:#F7FAFF; border:1px dashed #CFE0FF}
 
-    /* Services */
-    .services .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:18px; margin-top:26px}
-    .service-card{grid-column:span 3; min-height:260px; border-radius:18px; overflow:hidden; background:linear-gradient(180deg, rgba(30,58,138,.18), rgba(30,58,138,.06)); border:1px solid rgba(255,255,255,.08); position:relative}
-    .service-card.large{grid-column:span 6}
-    .service-media{height:54%; overflow:hidden;}
-    .service-media img{width:100%; height:100%; object-fit:cover; filter:grayscale(.12) saturate(1.1)}
-    .service-body{padding:16px 18px 22px}
-    .tag{display:inline-block; font-size:.75rem; letter-spacing:.06em; text-transform:uppercase; padding:6px 10px; border-radius:999px; background:rgba(37,99,235,.15); color:#DCE7FF; border:1px solid rgba(255,255,255,.08)}
+    /* Services — tiles with icons */
+    .tiles{display:grid; grid-template-columns:repeat(12,1fr); gap:16px}
+    .tile{grid-column:span 4; padding:18px; display:flex; flex-direction:column; gap:10px}
+    .tile h3{margin:2px 0 0}
+    .tile p{color:var(--muted); margin:0}
+    .tile .tag{display:inline-block; font-size:.75rem; padding:6px 10px; border-radius:999px; background:#E8F1FF; color:#17488F; border:1px solid #CDE0FF}
 
-    /* Gallery */
-    .gallery .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:14px; margin-top:20px}
-    .shot{grid-column:span 3; border-radius:16px; overflow:hidden; position:relative; border:1px solid rgba(255,255,255,.08); cursor:pointer}
-    .shot.large{grid-column:span 6}
-    .shot img{width:100%; height:220px; object-fit:cover; transition:transform .6s ease;}
-    .shot:hover img{transform:scale(1.06)}
-
-    /* Modal Lightbox */
-    .lightbox{position:fixed; inset:0; background:rgba(5,8,18,.85); display:none; align-items:center; justify-content:center; z-index:100}
-    .lightbox.active{display:flex}
-    .lightbox img{max-width:92vw; max-height:84vh; border-radius:16px; box-shadow:var(--shadow-lg); border:1px solid rgba(255,255,255,.12)}
+    /* Gallery — masonry look */
+    .masonry{columns:4 220px; column-gap:14px}
+    .masonry a{display:block; break-inside:avoid; margin:0 0 14px}
+    .masonry img{width:100%; border-radius:14px; border:1px solid var(--line); box-shadow:var(--shadow)}
 
     /* Contact */
-    .contact .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:20px; align-items:stretch}
-    .card{background:rgba(17,24,39,.6); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:22px; box-shadow:var(--shadow-sm)}
-    .contact-list{display:grid; gap:12px; margin-top:10px}
-    .contact-item{display:flex; gap:12px; align-items:flex-start; padding:12px; border-radius:14px; background:rgba(255,255,255,.04)}
+    .contact-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:20px}
+    .input{width:100%; padding:14px 16px; border-radius:12px; border:1px solid var(--line); background:#FAFCFF}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 16px; border-radius:12px; background:var(--blue); color:#fff; border:0}
+    .list{display:grid; gap:10px}
+    .list .row{display:flex; gap:12px; align-items:flex-start; padding:12px; border-radius:12px; background:#F7FAFF; border:1px dashed #CFE0FF}
 
-    /* Footer */
-    footer{padding:26px 0 40px; border-top:1px solid rgba(255,255,255,.06); background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01))}
-    .footgrid{display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap}
-    .social{display:flex; gap:12px}
-    .social a{width:38px; height:38px; border-radius:12px; display:grid; place-items:center; border:1px solid rgba(255,255,255,.08)}
-    .social a:hover{background:rgba(255,255,255,.06)}
+    /* Diagonal separators */
+    .slice{position:absolute; left:0; right:0; height:84px; background:linear-gradient(180deg, rgba(159,196,255,.12), rgba(159,196,255,0));}
+    .slice.top{top:-84px; clip-path:polygon(0 100%,100% 0,100% 100%,0 100%)}
+    .slice.bot{bottom:-84px; clip-path:polygon(0 0,100% 0,100% 0,0 100%)}
 
-    /* Reveal on scroll */
-    .reveal{opacity:0; transform:translateY(16px) scale(.98); filter:saturate(.9); transition:opacity .8s ease, transform .8s ease, filter .8s ease}
-    .reveal.in-view{opacity:1; transform:translateY(0) scale(1); filter:saturate(1)}
+    /* Reveal */
+    .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease}
+    .reveal.in{opacity:1; transform:translateY(0)}
 
-    /* Utilities */
-    .muted{color:#A8B7D6}
-    .chip{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.05)}
+    footer{padding:26px 0 40px; border-top:1px solid var(--line); color:var(--muted)}
 
-    /* Responsive */
-    @media (max-width: 1024px){
-      .grid-hero{grid-template-columns:1fr}
-      .about-grid, .contact .grid{grid-template-columns:1fr}
-      .service-card{grid-column:span 6}
-      .shot{grid-column:span 4}
-    }
-    @media (max-width: 720px){
-      .nav-links{display:none}
-      .cta-phone{display:inline-flex}
-      .hamburger{display:inline-flex}
-      .service-card{grid-column:span 12}
-      .shot{grid-column:span 12}
-      .actions{justify-content:center}
-      .lead{text-align:center}
-      .hero .h1, .kicker{text-align:center}
+    @media (max-width: 920px){
+      .hero-inner, .about-grid, .contact-grid{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <a href="#home" class="brand">
+      <a class="brand" href="#home">
         <div class="logo" aria-hidden="true"></div>
-        <span>WEILERS CLEANING SERVICE CORP</span>
+        <b>WEILERS CLEANING SERVICE CORP</b>
       </a>
-      <nav class="nav-links">
+      <nav style="display:flex; gap:8px; align-items:center">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
-        <a class="chip" href="tel:+19713337535" aria-label="Call us">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.16 9.81 19.86 19.86 0 0 1 .09 1.18 2 2 0 0 1 2.11 0h3a2 2 0 0 1 2 1.72c.12.9.3 1.78.54 2.63a2 2 0 0 1-.45 2.11L6 7a16 16 0 0 0 7 7l.54-.21a2 2 0 0 1 2.11.45c.85.24 1.73.42 2.63.54A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.6"/></svg>
-          <strong>+1 971 333 7535</strong>
-        </a>
+        <a class="cta" href="tel:+19713337535">Call +1 971 333 7535</a>
       </nav>
-      <button class="hamburger" id="menuBtn" aria-label="Open menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h16" stroke="#DCE7FF" stroke-width="2" stroke-linecap="round"/></svg>
-      </button>
     </div>
   </header>
 
   <main>
-    <!-- ================== HERO ================== -->
+    <!-- HERO -->
     <section id="home" class="hero">
-      <div class="blob b1"></div>
-      <div class="blob b2"></div>
-      <div class="container grid-hero">
+      <div class="container hero-inner">
         <div>
-          <div class="kicker reveal" data-delay="0">Clean • Classy • Reliable</div>
-          <h1 class="h1 reveal" data-delay="100">Grey & Blue <span style="color:var(--blue-300)">Class</span> for a Sparkling Space</h1>
-          <p class="lead reveal" data-delay="200">We deliver premium <strong>residential & commercial cleaning</strong> across Orlando, FL. From spotless windows to immaculate offices, our trained technicians bring shine with professional care and top-grade products.</p>
-          <div class="actions reveal" data-delay="300">
-            <a class="btn btn-primary" href="#contact">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Get a Free Quote
-            </a>
-            <a class="btn btn-ghost" href="mailto:contact@wcscecorp.shop">contact@wcscecorp.shop</a>
-            <a class="btn btn-ghost cta-phone" href="tel:+19713337535">Call +1 971 333 7535</a>
+          <div class="eyebrow">Grey & Blue — Classy</div>
+          <h1>Spotless Spaces. <span class="underline">Professional Care</span>.</h1>
+          <p class="lead">We deliver premium <strong>residential & commercial cleaning</strong> across Orlando, FL — windows, offices, move‑in/out, and more. Smooth scheduling, trained teams, and discreet service.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:18px">
+            <a class="btn" href="#contact">Get a Free Quote</a>
+            <a class="btn" style="background:#0D1B2A" href="mailto:contact@wcscecorp.shop">contact@wcscecorp.shop</a>
           </div>
         </div>
-        <div class="hero-media reveal" data-delay="200">
-          <div class="media-grid">
-            <figure class="card-img tilt" style="animation-delay:.05s"><img alt="Team cleaning" src="https://greatfacility.com/images/022947124_prevstill.jpeg"></figure>
-            <figure class="card-img tilt" style="animation-delay:.1s"><img alt="Window washing" src="https://cmmonline.com/wp-content/uploads/03-2016-window-washing-detail-1200x627.jpg"></figure>
-            <figure class="card-img tilt" style="animation-delay:.15s"><img alt="Office interior" src="https://i7.photo.2gis.com/images/branch/43/6051712021376094_8d2e.jpg"></figure>
-            <figure class="card-img tilt" style="animation-delay:.2s"><img alt="Certificate" src="https://avatars.mds.yandex.net/get-ydo/3904573/2a00000181b9007fcd00158c2b42434bb8b3/diploma"></figure>
-          </div>
+        <div class="stack">
+          <!-- NEW images (not the ones you sent; using fresh stock links) -->
+          <div class="photo"><img alt="Window detail" src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?q=80&w=1200&auto=format&fit=crop"/></div>
+          <div class="photo"><img alt="Office lobby clean" src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1200&auto=format&fit=crop"/></div>
+          <div class="photo"><img alt="Glass facade" src="https://images.unsplash.com/photo-1496307653780-42ee777d4833?q=80&w=1200&auto=format&fit=crop"/></div>
         </div>
       </div>
+      <div class="slice bot"></div>
     </section>
 
-    <!-- ================== ABOUT ================== -->
-    <section id="about" class="about">
-      <div class="container about-grid">
-        <div class="about-copy">
-          <h2 class="section-title reveal">About Us</h2>
-          <p class="section-lead reveal" data-delay="100">At <strong>WEILERS CLEANING SERVICE CORP</strong>, we specialize in high-quality cleaning solutions for homes and businesses. Our domain is <em>cleaning</em> — windows, offices, move-in/out, and more — executed with care, consistency, and discrete professionalism in a classy grey & blue aesthetic.</p>
-
-          <div class="about-card reveal" data-delay="180">
-            <div class="stat">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7L12 2z" stroke="#93C5FD" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Trained & Insured</strong>
-                <div class="muted">Professionals you can trust in your space.</div>
-              </div>
-            </div>
-            <div class="stat">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12a9 9 0 1 0 18 0A9 9 0 0 0 3 12zm5 0l4 4 6-6" stroke="#93C5FD" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Quality Checked</strong>
-                <div class="muted">Detailed checklists & final walk‑throughs.</div>
-              </div>
-            </div>
-            <div class="stat">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M12 5v14" stroke="#93C5FD" stroke-width="1.6" stroke-linecap="round"/></svg>
-              <div>
-                <strong>Flexible Scheduling</strong>
-                <div class="muted">Same‑day & after‑hours options available.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="about-media reveal" data-delay="120">
-          <div class="card" style="height:100%">
-            <img src="https://avatars.mds.yandex.net/i?id=e9dd6ca6310df000b1db8a410e1f3b30_l-5151239-images-thumbs&ref=rim&n=13&w=600&h=426" alt="Team at work" style="width:100%; height:100%; object-fit:cover; border-radius:12px">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================== SERVICES ================== -->
-    <section id="services" class="services">
+    <!-- ABOUT -->
+    <section id="about">
       <div class="container">
-        <div class="reveal">
+        <div class="section-head">
+          <h2 class="section-title">About Us</h2>
+          <p class="section-lead">Our domain is cleaning — windows, offices, and deep cleans — executed with a calm, classy aesthetic in grey & blue tones.</p>
+        </div>
+        <div class="about-grid">
+          <div class="card" style="padding:18px">
+            <div class="bullet"><strong>Trained & Insured</strong> <span style="color:var(--muted)">Professionals you can trust in your space.</span></div>
+            <div class="bullet"><strong>Quality Checked</strong> <span style="color:var(--muted)">Detailed checklists, supervisor sign‑off.</span></div>
+            <div class="bullet"><strong>Flexible Hours</strong> <span style="color:var(--muted)">Same‑day & after‑hours availability.</span></div>
+          </div>
+          <div class="card" style="padding:0; overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1600&auto=format&fit=crop" alt="Team at work"/>
+          </div>
+        </div>
+      </div>
+      <div class="slice bot"></div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
           <h2 class="section-title">Services</h2>
-          <p class="section-lead">Classy, efficient, and detail‑oriented cleaning for every need.
-          </p>
+          <p class="section-lead">Detail‑oriented cleaning, efficient planning, and respectful teams.</p>
         </div>
-        <div class="grid">
-          <article class="service-card large reveal" data-delay="60">
-            <div class="service-media"><img src="https://cmmonline.com/wp-content/uploads/03-2016-window-washing-detail-1200x627.jpg" alt="Window Cleaning"></div>
-            <div class="service-body">
-              <span class="tag">Windows</span>
-              <h3>Interior & Exterior Window Cleaning</h3>
-              <p class="muted">Crystal‑clear panes, frames, and tracks using streak‑free techniques and pure water systems.</p>
-            </div>
+        <div class="tiles">
+          <article class="card tile reveal">
+            <span class="tag">Windows</span>
+            <h3>Interior & Exterior Windows</h3>
+            <p>Crystal‑clear panes, frames, and tracks using streak‑free techniques.</p>
           </article>
-          <article class="service-card reveal" data-delay="100">
-            <div class="service-media"><img src="https://i7.photo.2gis.com/images/branch/43/6051712021376094_8d2e.jpg" alt="Office"></div>
-            <div class="service-body">
-              <span class="tag">Offices</span>
-              <h3>Office & Commercial</h3>
-              <p class="muted">Desks, floors, restrooms, meeting rooms, and common areas kept pristine and productive.</p>
-            </div>
+          <article class="card tile reveal">
+            <span class="tag">Commercial</span>
+            <h3>Office Cleaning</h3>
+            <p>Lobbies, desks, restrooms, and common areas — kept pristine.</p>
           </article>
-          <article class="service-card reveal" data-delay="140">
-            <div class="service-media"><img src="https://greatfacility.com/images/022947124_prevstill.jpeg" alt="Deep clean"></div>
-            <div class="service-body">
-              <span class="tag">Deep Clean</span>
-              <h3>Move‑In / Move‑Out</h3>
-              <p class="muted">Top‑to‑bottom refresh for new tenants or listings — kitchens, baths, appliances, and more.</p>
-            </div>
+          <article class="card tile reveal">
+            <span class="tag">Deep Clean</span>
+            <h3>Move‑In / Move‑Out</h3>
+            <p>Top‑to‑bottom refresh for new tenants or listings.</p>
           </article>
-          <article class="service-card reveal" data-delay="180">
-            <div class="service-media"><img src="https://avatars.mds.yandex.net/get-ydo/3904573/2a00000181b9007fcd00158c2b42434bb8b3/diploma" alt="Certified"></div>
-            <div class="service-body">
-              <span class="tag">Add‑ons</span>
-              <h3>Disinfection & Extras</h3>
-              <p class="muted">EPA‑grade products, high‑touch disinfection, fridge/oven, inside cabinets, and more.</p>
-            </div>
+          <article class="card tile reveal">
+            <span class="tag">Add‑ons</span>
+            <h3>Disinfection + Extras</h3>
+            <p>EPA‑grade products, high‑touch disinfection, fridge/oven, inside cabinets.</p>
+          </article>
+          <article class="card tile reveal">
+            <span class="tag">Specialty</span>
+            <h3>Glass & Facades</h3>
+            <p>Exterior glass, signage, and atriums with safety‑first procedures.</p>
+          </article>
+          <article class="card tile reveal">
+            <span class="tag">Residential</span>
+            <h3>Homes & Condos</h3>
+            <p>Recurring plans — weekly, biweekly, or monthly.</p>
           </article>
         </div>
       </div>
+      <div class="slice bot"></div>
     </section>
 
-    <!-- ================== GALLERY ================== -->
-    <section id="gallery" class="gallery">
+    <!-- GALLERY -->
+    <section id="gallery">
       <div class="container">
-        <div class="reveal">
+        <div class="section-head">
           <h2 class="section-title">Recent Work</h2>
-          <p class="section-lead">A few before‑and‑after snaps from our daily shine.</p>
+          <p class="section-lead">A few snapshots from our daily shine.</p>
         </div>
-        <div class="grid">
-          <a class="shot large reveal" data-delay="60"><img src="https://cmmonline.com/wp-content/uploads/03-2016-window-washing-detail-1200x627.jpg" alt="Gallery 1"></a>
-          <a class="shot reveal" data-delay="100"><img src="https://i7.photo.2gis.com/images/branch/43/6051712021376094_8d2e.jpg" alt="Gallery 2"></a>
-          <a class="shot reveal" data-delay="140"><img src="https://greatfacility.com/images/022947124_prevstill.jpeg" alt="Gallery 3"></a>
-          <a class="shot reveal" data-delay="180"><img src="https://avatars.mds.yandex.net/get-ydo/3904573/2a00000181b9007fcd00158c2b42434bb8b3/diploma" alt="Gallery 4"></a>
+        <div class="masonry">
+          <a href="#"><img alt="After clean 1" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop"/></a>
+          <a href="#"><img alt="After clean 2" src="https://images.unsplash.com/photo-1507209696998-3c532be9b2b6?q=80&w=1200&auto=format&fit=crop"/></a>
+          <a href="#"><img alt="After clean 3" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop"/></a>
+          <a href="#"><img alt="After clean 4" src="https://images.unsplash.com/photo-1564540583246-934409427776?q=80&w=1200&auto=format&fit=crop"/></a>
+          <a href="#"><img alt="After clean 5" src="https://images.unsplash.com/photo-1524758631624-1d23c32116b4?q=80&w=1200&auto=format&fit=crop"/></a>
+          <a href="#"><img alt="After clean 6" src="https://images.unsplash.com/photo-1524758631624-6ec93ef43f06?q=80&w=1200&auto=format&fit=crop"/></a>
         </div>
       </div>
+      <div class="slice bot"></div>
     </section>
 
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
-      <img id="lightboxImg" alt="Preview" />
-    </div>
-
-    <!-- ================== CONTACT ================== -->
-    <section id="contact" class="contact">
+    <!-- CONTACT -->
+    <section id="contact">
       <div class="container">
-        <div class="reveal">
-          <h2 class="section-title">Contact Us</h2>
-          <p class="section-lead">Tell us about your space — we’ll tailor a classy, efficient plan.</p>
+        <div class="section-head">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-lead">Tell us about your space — we’ll tailor a plan and quote.</p>
         </div>
-        <div class="grid">
-          <div class="card reveal" data-delay="80">
-            <h3 style="margin-top:0">Get a Free Quote</h3>
-            <form onsubmit="event.preventDefault(); alert('Thanks! We\'ll get back to you shortly.');" style="display:grid; gap:12px; margin-top:10px">
-              <input required placeholder="Full name" style="padding:14px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:#EAF2FF" />
-              <input type="email" required placeholder="Email address" style="padding:14px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:#EAF2FF" />
-              <input type="tel" required placeholder="Phone" style="padding:14px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:#EAF2FF" />
-              <textarea rows="4" placeholder="What do you need cleaned?" style="padding:14px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:#EAF2FF"></textarea>
-              <button class="btn btn-primary" type="submit">Send Request</button>
-            </form>
-          </div>
-          <div class="card reveal" data-delay="120">
-            <h3 style="margin-top:0">Company Details</h3>
-            <div class="contact-list">
-              <div class="contact-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z" stroke="#93C5FD" stroke-width="1.6"/><circle cx="12" cy="10" r="3" fill="#93C5FD"/></svg>
-                <div>
-                  <div><strong>Address</strong></div>
-                  <div class="muted">PARK CENTRAL DR, APT1718, ORLANDO, FL, 32839</div>
-                </div>
-              </div>
-              <div class="contact-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.16 9.81 19.86 19.86 0 0 1 .09 1.18 2 2 0 0 1 2.11 0h3a2 2 0 0 1 2 1.72c.12.9.3 1.78.54 2.63a2 2 0 0 1-.45 2.11L6 7a16 16 0 0 0 7 7l.54-.21a2 2 0 0 1 2.11.45c.85.24 1.73.42 2.63.54A2 2 0 0 1 22 16.92z" stroke="#93C5FD" stroke-width="1.6"/></svg>
-                <div>
-                  <div><strong>Phone</strong></div>
-                  <a class="muted" href="tel:+19713337535">+1 971 333 7535</a>
-                </div>
-              </div>
-              <div class="contact-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16v16H4V4z" stroke="#93C5FD" stroke-width="1.6"/><path d="M22 6l-10 7L2 6" stroke="#93C5FD" stroke-width="1.6"/></svg>
-                <div>
-                  <div><strong>Email</strong></div>
-                  <a class="muted" href="mailto:contact@wcscecorp.shop">contact@wcscecorp.shop</a>
-                </div>
-              </div>
-              <div class="contact-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z" stroke="#93C5FD" stroke-width="1.6"/><path d="M8 12h8M12 8v8" stroke="#93C5FD" stroke-width="1.6"/></svg>
-                <div>
-                  <div><strong>Hours</strong></div>
-                  <div class="muted">Mon–Sun • 8:00 – 20:00</div>
-                </div>
-              </div>
+        <div class="contact-grid">
+          <form class="card" style="padding:18px" onsubmit="event.preventDefault(); alert('Thanks! We\'ll get back to you shortly.');">
+            <input class="input" placeholder="Full name" required>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:10px 0">
+              <input class="input" type="email" placeholder="Email" required>
+              <input class="input" type="tel" placeholder="Phone" required>
+            </div>
+            <textarea class="input" rows="4" placeholder="What do you need cleaned?"></textarea>
+            <button class="btn" type="submit">Send Request</button>
+          </form>
+          <div class="card" style="padding:18px">
+            <div class="list">
+              <div class="row"><strong>Address</strong><div>PARK CENTRAL DR, APT1718, ORLANDO, FL, 32839</div></div>
+              <div class="row"><strong>Phone</strong><a href="tel:+19713337535">+1 971 333 7535</a></div>
+              <div class="row"><strong>Email</strong><a href="mailto:contact@wcscecorp.shop">contact@wcscecorp.shop</a></div>
+              <div class="row"><strong>Hours</strong><div>Mon–Sun • 8:00 – 20:00</div></div>
             </div>
           </div>
         </div>
@@ -382,78 +255,24 @@
   </main>
 
   <footer>
-    <div class="container footgrid">
-      <div style="display:flex; align-items:center; gap:12px">
-        <div class="logo" aria-hidden="true" style="width:34px; height:34px"></div>
-        <div class="muted">© <span id="year"></span> WEILERS CLEANING SERVICE CORP. All rights reserved.</div>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap">
+      <div style="display:flex; align-items:center; gap:10px">
+        <div class="logo" style="width:32px; height:32px"></div>
+        <span>© <span id="year"></span> WEILERS CLEANING SERVICE CORP</span>
       </div>
-      <div class="social">
-        <a href="#" aria-label="Facebook">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.4V12h2.4V9.8c0-2.4 1.4-3.8 3.6-3.8 1 0 2 .2 2 .2v2.2h-1.1c-1.1 0-1.4.7-1.4 1.4V12h2.5l-.4 2.9h-2.1v7A10 10 0 0 0 22 12z" stroke="#DCE7FF" stroke-width="1.2"/></svg>
-        </a>
-        <a href="#" aria-label="Instagram">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="16" height="16" rx="5" stroke="#DCE7FF" stroke-width="1.2"/><circle cx="12" cy="12" r="3.5" stroke="#DCE7FF" stroke-width="1.2"/><circle cx="17" cy="7" r="1" fill="#DCE7FF"/></svg>
-        </a>
-        <a href="#" aria-label="LinkedIn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#DCE7FF" stroke-width="1.2"/><path d="M7 10v7M7 7v.01M11 17v-5a2 2 0 1 1 4 0v5" stroke="#DCE7FF" stroke-width="1.2" stroke-linecap="round"/></svg>
-        </a>
+      <div style="display:flex; gap:10px">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // Current year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mobile menu (simple smooth scroll from hamburger)
-    const menuBtn = document.getElementById('menuBtn');
-    menuBtn?.addEventListener('click', () => {
-      const links = document.querySelector('.nav-links');
-      if(!links) return;
-      links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const href = a.getAttribute('href');
-        if(href && href.length > 1){
-          e.preventDefault();
-          document.querySelector(href)?.scrollIntoView({behavior:'smooth'});
-        }
-      });
-    });
-
     // Reveal on scroll
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          const delay = entry.target.getAttribute('data-delay') || 0;
-          setTimeout(() => entry.target.classList.add('in-view'), delay);
-          io.unobserve(entry.target);
-        }
-      })
-    }, {threshold: .15});
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // Lightbox
-    const lb = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightboxImg');
-    document.querySelectorAll('.shot').forEach(s => s.addEventListener('click', () => {
-      const img = s.querySelector('img');
-      if(!img) return;
-      lbImg.src = img.src; lb.classList.add('active');
-    }));
-    lb.addEventListener('click', () => lb.classList.remove('active'));
-
-    // Subtle parallax for blobs on scroll
-    const blobs = document.querySelectorAll('.blob');
-    window.addEventListener('scroll', () => {
-      const y = window.scrollY;
-      blobs.forEach((b, i) => {
-        b.style.transform = `translateY(${(i%2===0?1:-1) * y * 0.06}px)`;
-      });
-    });
+    const io = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target)}}),{threshold:.15});
+    document.querySelectorAll('.reveal, .tile').forEach(el=>io.observe(el));
   </script>
 </body>
 </html>
